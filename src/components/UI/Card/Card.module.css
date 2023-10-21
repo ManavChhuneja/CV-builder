@@ -1,3 +1,9 @@
 .card {
-  box-shadow: 1px 1px 5px 0.1px #0000004c;
+  box-shadow: 1px 1px 50px 1px #00000031;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  z-index: -1;
+  /* border: 1px solid #00000031; */
 }

@@ -7,7 +7,11 @@ const Button = (props) => {
   };
 
   return (
-    <button className={styles["ui-button"]} style={style}>
+    <button
+      className={styles["ui-button"]}
+      style={style}
+      type={props.type === "submit" ? "submit" : "button"}
+    >
       {props.text}
     </button>
   );

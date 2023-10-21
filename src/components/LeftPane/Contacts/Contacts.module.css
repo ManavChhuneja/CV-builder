@@ -1,0 +1,41 @@
+.contacts {
+  text-align: left;
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-heading {
+  margin: 0px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.visible-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rotate-icon {
+  transition: transform 0.3s;
+}
+
+.rotate-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.dropdown:hover {
+  background-color: #f1e9e9;
+  cursor: pointer;
+}
