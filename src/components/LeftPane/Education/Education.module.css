@@ -1,9 +1,9 @@
-.experience-form {
+.education-form {
   display: flex;
   flex-direction: column;
 }
 
-.experience-heading {
+.education-heading {
   margin: 0px;
 }
 
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.job-description {
+.education-description {
   height: 150px;
   margin: 10px 0;
   padding: 10px 10px;
