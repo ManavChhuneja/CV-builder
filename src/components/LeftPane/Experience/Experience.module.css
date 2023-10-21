@@ -1,9 +1,9 @@
-.contacts-form {
+.experience-form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-heading {
+.experience-heading {
   margin: 0px;
 }
 
