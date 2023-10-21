@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "../../UI/Button/Button";
 import styles from "./Education.module.css";
 import Input from "../../UI/Input/Input";
@@ -8,6 +8,13 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Education() {
   const [arrowClicked, setArrowClicked] = useState(false);
+  const refs = {
+    college: useRef(null),
+    degree: useRef(null),
+    start: useRef(null),
+    end: useRef(null),
+    description: useRef(null),
+  };
 
   const clickHandler = () => {
     setArrowClicked((prevState) => !prevState);
@@ -33,24 +40,34 @@ export default function Education() {
             placeholder="College/University Name"
             label="College/University:"
             forElement="college"
+            reference={refs.college}
           />
           <Input
             type="text"
             placeholder="Degree"
             label="Degree:"
             forElement="degree"
+            reference={refs.degree}
           />
 
-          <Input type="date" label="Start Date:" forElement="startDate" />
+          <Input
+            type="date"
+            label="Start Date:"
+            forElement="startDate"
+            reference={refs.start}
+          />
           <Input
             type="date"
             label="End Date (leave blank if currently employed):"
             forElement="endDate"
+            reference={refs.end}
           />
 
           <textarea
             className={styles["education-description"]}
-            placeholder="Add additional information if needed"
+            placeholder="Add additional information if needed - maximum 200 characters"
+            ref={refs.description}
+            maxLength="200"
           ></textarea>
           <div className={styles.buttons}>
             <Button text="Submit" type="submit" />

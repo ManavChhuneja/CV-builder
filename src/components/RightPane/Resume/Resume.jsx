@@ -1,6 +1,17 @@
 import React from "react";
 import styles from "./Resume.module.css";
+import Title from "./Title/Title";
+import Entry from "./Entry/Entry";
+import EducationList from "./ResumeContent/EducationList/EducationList";
+import ExperienceList from "./ResumeContent/ExperienceList/ExperienceList";
 
 export default function Resume() {
-  return <div className={styles["resume-container"]}>Resume</div>;
+  return (
+    <div className={styles["resume-container"]}>
+      <Title />
+      <ExperienceList />
+      <hr />
+      <EducationList />
+    </div>
+  );
 }

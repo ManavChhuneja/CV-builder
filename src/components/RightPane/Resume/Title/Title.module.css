@@ -1,0 +1,17 @@
+.title-container {
+  height: 125px;
+  width: 100%;
+  background-color: #004aad;
+  color: White;
+}
+
+.name {
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+}

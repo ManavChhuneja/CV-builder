@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./Input.module.css";
 
-export default function Input({ type, placeholder, label, forElement }) {
+const Input = React.forwardRef((props, reference) => {
+  const { type, placeholder, label, forElement } = props;
+
   return (
     <>
       <label htmlFor={forElement}>{label}</label>
@@ -10,7 +12,10 @@ export default function Input({ type, placeholder, label, forElement }) {
         placeholder={placeholder}
         className={styles.input}
         id={forElement}
+        ref={reference}
       />
     </>
   );
-}
+});
+
+export default Input;

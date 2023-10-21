@@ -1,5 +1,9 @@
 .resume-container {
   width: 794px;
   height: 1122px;
-  background-color: black;
+  box-shadow: 1px 1px 50px 1px #00000031;
+}
+
+.resume-container hr {
+  width: 80%;
 }
