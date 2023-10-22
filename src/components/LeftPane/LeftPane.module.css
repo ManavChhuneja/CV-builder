@@ -1,3 +1,9 @@
 .leftPane {
   width: 50%;
 }
+
+@media (max-width: 1200px) {
+  .leftPane {
+    width: 95%;
+  }
+}

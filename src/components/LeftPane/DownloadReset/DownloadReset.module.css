@@ -1,6 +1,18 @@
 .flexContainer {
-  width: 400px;
+  width: 540px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .flexContainer {
+    width: 390px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flexContainer {
+    width: 95%;
+  }
 }
