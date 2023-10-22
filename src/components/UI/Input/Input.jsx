@@ -1,9 +1,11 @@
 import React from "react";
+import { forwardRef } from "react";
 import styles from "./Input.module.css";
 
-const Input = React.forwardRef((props, reference) => {
-  const { type, placeholder, label, forElement } = props;
+// Reusable input element wtih forward refs
 
+const Input = forwardRef((props, ref) => {
+  const { type, placeholder, label, forElement } = props;
   return (
     <>
       <label htmlFor={forElement}>{label}</label>
@@ -12,7 +14,7 @@ const Input = React.forwardRef((props, reference) => {
         placeholder={placeholder}
         className={styles.input}
         id={forElement}
-        ref={reference}
+        ref={ref}
       />
     </>
   );

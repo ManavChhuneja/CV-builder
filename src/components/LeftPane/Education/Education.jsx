@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Education() {
+  // setting arrow clicked state and rendering the card components when the arrow is clicked
   const [arrowClicked, setArrowClicked] = useState(false);
   const refs = {
     college: useRef(null),
