@@ -34,6 +34,8 @@ export default function Contacts() {
         return;
       }
     }
+
+    // updating the state
     updateResumeData((prevState) => ({
       ...prevState,
       contact: {
@@ -42,6 +44,11 @@ export default function Contacts() {
         phone: refs.phone.current.value,
       },
     }));
+
+    // resetting the input refs
+    refs.name.current.value = "";
+    refs.email.current.value = "";
+    refs.phone.current.value = "";
   };
   return (
     <Card>

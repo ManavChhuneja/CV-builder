@@ -6,11 +6,18 @@ const Button = (props) => {
     backgroundColor: props.type === "reset" ? "#FF3131" : "#004aad",
   };
 
+  const clickHandler = () => {
+    if (props.type === "reset") {
+      props.onButtonClick();
+    }
+  };
+
   return (
     <button
       className={styles["ui-button"]}
       style={style}
       type={props.type === "submit" ? "submit" : "button"}
+      onClick={clickHandler}
     >
       {props.text}
     </button>

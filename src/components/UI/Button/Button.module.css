@@ -6,3 +6,8 @@
   padding: 7px 25px;
   border-radius: 20px;
 }
+
+.ui-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
