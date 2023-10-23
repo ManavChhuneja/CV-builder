@@ -10,7 +10,7 @@ export default function Modal({ onClose }) {
         <div className={styles.modal}>
           <div className={styles["modal-content"]}>
             <p>Please add required information before downloading</p>
-            <Button text="Ok" />
+            <Button text="Ok" type="button" />
           </div>
         </div>,
         document.getElementById("modal-root")
