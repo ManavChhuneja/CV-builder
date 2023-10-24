@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, useRef, useContext, useEffect } from "react";
 import Button from "../../UI/Button/Button";
 import styles from "./Contacts.module.css";
 import Input from "../../UI/Input/Input";
@@ -10,6 +10,8 @@ import ResumeContext from "../../Contexts/ResumeContext";
 export default function Contacts() {
   // setting arrow clicked state and rendering the card components when the arrow is clicked
   const [arrowClicked, setArrowClicked] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   const updateResumeData = useContext(ResumeContext); // getting ResumeContext state changer to update the contact state
 
   // defining refs to capture the input element data
@@ -34,7 +36,7 @@ export default function Contacts() {
         return;
       }
     }
-
+    console.log(refs.name.current.value);
     // updating the state
     updateResumeData((prevState) => ({
       ...prevState,
@@ -44,12 +46,21 @@ export default function Contacts() {
         phone: refs.phone.current.value,
       },
     }));
+    setIsFormSubmitted(true);
 
     // resetting the input refs
-    refs.name.current.value = "";
-    refs.email.current.value = "";
-    refs.phone.current.value = "";
+    // refs.name.current.value = "";
+    // refs.email.current.value = "";
+    // refs.phone.current.value = "";
   };
+  useEffect(() => {
+    if (isFormSubmitted) {
+      refs.name.current.value = "";
+      refs.email.current.value = "";
+      refs.phone.current.value = "";
+      setIsFormSubmitted(false);
+    }
+  }, [isFormSubmitted]);
 
   const resetClickHandler = () => {
     refs.name.current.value = "";
