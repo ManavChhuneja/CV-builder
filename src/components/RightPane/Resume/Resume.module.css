@@ -1,6 +1,8 @@
 .resume-container {
   width: 794px;
-  min-height: 1122px;
+  /* min-height: 1122px;
+  max-height: 1200px; */
+  height: 1122px;
   box-shadow: 1px 1px 50px 1px #00000031;
 }
 
