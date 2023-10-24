@@ -50,6 +50,13 @@ export default function Contacts() {
     refs.email.current.value = "";
     refs.phone.current.value = "";
   };
+
+  const resetClickHandler = () => {
+    refs.name.current.value = "";
+    refs.email.current.value = "";
+    refs.phone.current.value = "";
+  };
+
   return (
     <Card>
       <div className={styles["visible-container"]}>
@@ -89,7 +96,11 @@ export default function Contacts() {
           />
           <div className={styles.buttons}>
             <Button text="Submit" type="submit" />
-            <Button text="Reset" type="reset" />
+            <Button
+              text="Reset"
+              type="reset"
+              onButtonClick={resetClickHandler}
+            />
           </div>
         </form>
       )}

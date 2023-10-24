@@ -7,9 +7,7 @@ const Button = (props) => {
   };
 
   const clickHandler = () => {
-    if (props.type === "reset") {
-      props.onButtonClick();
-    }
+    props.onButtonClick();
   };
 
   return (

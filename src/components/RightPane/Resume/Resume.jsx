@@ -7,7 +7,7 @@ import ExperienceList from "./ResumeContent/ExperienceList/ExperienceList";
 
 export default function Resume() {
   return (
-    <div className={styles["resume-container"]}>
+    <div className={styles["resume-container"]} id="resume">
       <Title />
       <ExperienceList />
       <hr />
