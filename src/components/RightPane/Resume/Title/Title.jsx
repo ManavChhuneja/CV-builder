@@ -3,7 +3,7 @@ import ResumeContext from "../../../Contexts/ResumeContext";
 import styles from "./Title.module.css";
 
 export default function Title() {
-  const resumeData = useContext(ResumeContext);
+  const { resumeData, setResumeData } = useContext(ResumeContext);
   return (
     <div className={styles["title-container"]}>
       <h1 className={styles.name}>{resumeData.contact.name}</h1>

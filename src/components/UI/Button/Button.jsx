@@ -7,7 +7,9 @@ const Button = (props) => {
   };
 
   const clickHandler = () => {
-    props.onButtonClick();
+    if (props.type !== "submit") {
+      props.onButtonClick();
+    }
   };
 
   return (

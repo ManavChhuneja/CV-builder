@@ -18,7 +18,9 @@ function App() {
       <ResumeContext.Provider value={setResumeData}>
         <LeftPane />
       </ResumeContext.Provider>
-      <ResumeContext.Provider value={resumeData}>
+      <ResumeContext.Provider
+        value={{ resumeData: resumeData, setResumeData: setResumeData }}
+      >
         <Resume />
       </ResumeContext.Provider>
     </div>
